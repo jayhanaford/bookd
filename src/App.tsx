@@ -13,8 +13,8 @@ export default function App() {
       }}
     >
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ font: 'var(--bookd-type-4xl-emphasized)', margin: 0 }}>Bookd</h1>
-        <p style={{ color: 'var(--bookd-text-sub-700)' }}>
+        <h1 style={{ font: 'var(--bookd-type-display)', margin: 0 }}>Bookd</h1>
+        <p style={{ color: 'var(--bookd-text-secondary)' }}>
           Local-first booking for musicians and venues.
         </p>
         <Button>Get started</Button>

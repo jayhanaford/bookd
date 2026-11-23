@@ -7,19 +7,36 @@ import { Meta } from '@storybook/addon-docs/blocks';
 Bookd is a local-first booking platform for musicians and venues. This Storybook
 is its own design system, independent from any other library.
 
+## Visual direction: Gradient Ticket
+
+A near-black app shell with bright white cards, a pink-to-magenta gradient for
+primary actions, rounded stacked cards and a perforated "gig pass" for confirmed
+bookings. Headlines and buttons use **Plus Jakarta Sans**; body text uses **Inter**.
+The gradient is a signature, not a default: it marks primary actions and special
+highlights only.
+
 ## How tokens work
 
-- **Source:** DTCG JSON in `/tokens`, seeded from the Bookd Figma file
-  (`primitives/foundations.json`, `themes/light.json`, `themes/dark.json`).
+- **Source:** DTCG JSON in `/tokens` (`primitives/foundations.json`,
+  `themes/dark.json`, `themes/light.json`). Values come from the Gradient Ticket
+  board plus the additions and fixes recorded in `docs/token-qa.md`.
 - **Build:** `npm run tokens` (Style Dictionary) writes CSS custom properties and a
   typed `vars` map to `src/tokens/generated/`. It runs automatically before dev,
   build and Storybook.
 - **Naming:** every variable starts with `--bookd-`.
 - **Layers:** components use **semantic** tokens (`--bookd-bg-*`, `--bookd-text-*`,
-  `--bookd-brand-*`, `--bookd-state-*`). Raw palette tokens (`--bookd-color-*`)
-  are only referenced by semantic tokens.
-- **Themes:** set `data-bookd-theme="light" | "dark"` on any element. Use the
-  Theme toolbar above to switch.
+  `--bookd-border-*`, `--bookd-action-*`, `--bookd-focus-*`, `--bookd-status-*`,
+  `--bookd-gradient-*`). Palette tokens (`--bookd-color-*`) are only referenced by
+  semantic tokens.
+- **Themes:** dark is the default. Set `data-bookd-theme="light" | "dark"` on any
+  element. Use the Theme toolbar above to switch.
+- **White cards are light islands:** put `data-bookd-theme="light"` on a white card
+  that sits on the dark shell. Text, accent, outline and focus tokens then invert for
+  everything inside it, so components never assume every card is dark.
 
-The values are a starting foundation and will change as Bookd's visual
-direction is defined.
+## Accessibility
+
+Every text pair meets WCAG AA (4.5:1) and every control boundary and focus ring
+meets 3:1, in both themes. See **Foundations / Contrast QA** for the live check.
+Primary buttons use a dark label because white text on the pink gradient stop
+measures 3.5:1.

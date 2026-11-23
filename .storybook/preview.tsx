@@ -3,7 +3,7 @@ import '../src/styles/global.css';
 import { setTheme, type BookdTheme } from '../src/tokens';
 
 const withBookdTheme: Decorator = (Story, context) => {
-  const theme = (context.globals.theme ?? 'light') as BookdTheme;
+  const theme = (context.globals.theme ?? 'dark') as BookdTheme;
   setTheme(theme);
   return <Story />;
 };
@@ -16,14 +16,14 @@ const preview: Preview = {
         title: 'Theme',
         icon: 'mirror',
         items: [
-          { value: 'light', title: 'Light', icon: 'sun' },
           { value: 'dark', title: 'Dark', icon: 'moon' },
+          { value: 'light', title: 'Light', icon: 'sun' },
         ],
         dynamicTitle: true,
       },
     },
   },
-  initialGlobals: { theme: 'light' },
+  initialGlobals: { theme: 'dark' },
   decorators: [withBookdTheme],
   parameters: {
     backgrounds: { disable: true },
