@@ -8,7 +8,7 @@ import s from './proto.module.css';
  * for prototype messages. Shrinks to the viewport on small screens.
  */
 export function PhoneFrame({ children }: { children: ReactNode }) {
-  const { toast, restart } = useProto();
+  const { toast } = useProto();
   return (
     <div className={s.stage} data-bookd-theme="dark">
       <div className={s.device}>
@@ -39,12 +39,6 @@ export function PhoneFrame({ children }: { children: ReactNode }) {
         </div>
         <span className={s.homeIndicator} aria-hidden="true" />
       </div>
-      <p className={s.stageNote}>
-        Clickable prototype · fictional demo data · photos are AI-generated.{' '}
-        <button type="button" className={s.inlineLink} onClick={restart}>
-          Restart
-        </button>
-      </p>
     </div>
   );
 }

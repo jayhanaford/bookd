@@ -17,9 +17,9 @@
 .tab {
   display: grid;
   justify-items: center;
-  gap: var(--bookd-space-1);
+  gap: var(--bookd-space-1-5);
   width: 100%;
-  min-height: 52px;
+  min-height: 56px;
   padding: var(--bookd-space-0-5) 0;
   border: 0;
   border-radius: var(--bookd-radius-md);

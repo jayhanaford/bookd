@@ -18,7 +18,7 @@
 .device {
   position: relative;
   width: min(393px, 100%);
-  height: min(852px, calc(100vh - 80px));
+  height: min(852px, calc(100vh - 48px));
   min-height: 640px;
   overflow: hidden;
   border-radius: 44px;
@@ -83,7 +83,6 @@
 @keyframes toast-in { from { opacity: 0; transform: translateY(8px); } }
 @media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
 
-.stageNote { margin: 0; font: var(--bookd-type-caption); color: var(--bookd-text-secondary); text-align: center; }
 
 /* ---------- Screen shell ---------- */
 .screen {
@@ -134,13 +133,14 @@
   display: grid;
   gap: var(--bookd-space-2);
   flex: none;
-  padding: var(--bookd-space-3) var(--bookd-space-4) 30px;
+  padding: var(--bookd-space-3) var(--bookd-space-4) 34px;
   background: var(--bookd-bg-canvas);
 }
 .footerLight { background: var(--bookd-bg-card); color: var(--bookd-text-primary); }
 .footerRow { display: grid; grid-template-columns: auto 1fr; gap: var(--bookd-space-2); }
 
-.tabs { flex: none; padding-bottom: 22px; }
+/* Tab bar sits above a 34px home-indicator safe area, as on iOS. */
+.screen .tabs { flex: none; padding: var(--bookd-space-2) var(--bookd-space-2) 34px; }
 
 /* ---------- Type ---------- */
 .display { margin: 0; font: var(--bookd-type-display); letter-spacing: var(--bookd-letter-spacing-tight); }
