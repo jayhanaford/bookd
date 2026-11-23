@@ -1,0 +1,52 @@
+/* Bookd BottomNavigation. Semantic tokens only. */
+.nav {
+  border-top: var(--bookd-border-width-1) solid var(--bookd-border-subtle);
+  background: var(--bookd-bg-surface);
+  padding: var(--bookd-space-2) var(--bookd-space-1) var(--bookd-space-1);
+}
+
+.list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab {
+  display: grid;
+  justify-items: center;
+  gap: var(--bookd-space-1);
+  width: 100%;
+  min-height: 52px;
+  padding: var(--bookd-space-0-5) 0;
+  border: 0;
+  border-radius: var(--bookd-radius-md);
+  background: transparent;
+  color: var(--bookd-text-secondary);
+  font: var(--bookd-type-caption);
+  cursor: pointer;
+}
+.tab:hover { color: var(--bookd-text-primary); }
+.tab:focus-visible {
+  outline: var(--bookd-border-width-2) solid var(--bookd-focus-ring);
+  outline-offset: calc(-1 * var(--bookd-space-0-5));
+}
+
+.pill {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 28px;
+  border-radius: var(--bookd-radius-pill);
+}
+
+.label { white-space: nowrap; }
+
+.active { color: var(--bookd-text-primary); font-weight: var(--bookd-font-weight-semibold); }
+.active .pill {
+  background-color: var(--bookd-action-primary-fallback);
+  background-image: var(--bookd-gradient-action-primary);
+  color: var(--bookd-text-on-action);
+}

@@ -102,3 +102,22 @@ src/
   styles/       global CSS
   tokens/       token entry points (CSS + TS)
 ```
+
+## Clickable prototypes
+
+`src/prototype/` wires the approved high-fi Figma screens into a clickable app inside
+an iPhone-sized frame. Open Storybook and go to **Prototypes › Bookd app**:
+
+| Story | Starts at | Path |
+| --- | --- | --- |
+| Full app | Welcome | Get started → Local Pulse → anywhere |
+| Flow A · Finding a venue | Local Pulse | The Lantern Room → Introduce yourself (Harborside Taproom = unclaimed branch) |
+| Flow B · Applying to a gig | Gig detail | Apply → Application sent → offer v2 → Accept → confirmed ticket |
+| My Bookd + Connections | My Bookd | Musician home and status tracking |
+| Flow C · Venue posts a recurring gig | My Lineup | Basics → Schedule → Preview → Publish |
+| Screen picker | any | Use the `initialScreen` control |
+
+Anything outside the prototype shows a short "not part of this prototype" message
+instead of a dead end. Accepting the offer or sending an intro updates My Bookd and
+Connections. All data is fictional; photos in `src/assets/photos/` are AI-generated
+(see the README there).
