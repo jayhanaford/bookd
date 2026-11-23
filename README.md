@@ -33,28 +33,35 @@ once, or point `PLAYWRIGHT_CHROMIUM_PATH` at an existing Chromium binary.
 
 ## Design tokens
 
+Bookd uses the **Gradient Ticket** direction: near-black shell, white cards,
+pink-to-magenta gradient CTAs, Plus Jakarta Sans headings and Inter body text.
+
 ```
 tokens/
   primitives/foundations.json   palette, spacing, radius, borders, icon sizes,
                                 shadows, blur, typography
-  themes/light.json             semantic colors, light
-  themes/dark.json              semantic colors, dark
+  themes/dark.json              semantic colors and gradients, dark (default)
+  themes/light.json             semantic colors and gradients, light
 scripts/build-tokens.mjs        Style Dictionary build
 src/tokens/generated/           output (git-ignored): CSS variables + typed `vars` map
+docs/token-qa.md                contrast audit and every change made to the source values
 ```
 
-- Tokens are [DTCG](https://www.designtokens.org/) JSON, seeded from the
-  [Bookd Design System Figma file](https://www.figma.com/design/L6RRUOTmxOQwLOR6XgYmHR/Bookd---Design-System.?node-id=10-597)
-  (collections *Foundations*, *Color Tokens* Light/Dark, *Typography*, plus effect styles).
-- The current values are the Figma starter kit's foundation. They will change as
-  Bookd's visual direction is defined; edit the JSON and everything downstream updates.
-- **Use semantic tokens in components** (`--bookd-bg-*`, `--bookd-text-*`, `--bookd-fg-*`,
-  `--bookd-border-*`, `--bookd-brand-*`, `--bookd-state-*`). Palette tokens
-  (`--bookd-color-*`) exist for semantic tokens to reference.
-- Typography styles are font shorthands: `font: var(--bookd-type-base-emphasized)`.
-- Theme with `data-bookd-theme="light" | "dark"` on `<html>` or any subtree
-  (`setTheme()` from `src/tokens`). Storybook has a Theme toolbar.
-- In TypeScript, `vars['bookd-brand-base']` gives `'var(--bookd-brand-base)'` with autocomplete.
+- Tokens are [DTCG](https://www.designtokens.org/) JSON. The same names exist as
+  variables in the [Bookd Design System Figma file](https://www.figma.com/design/L6RRUOTmxOQwLOR6XgYmHR/Bookd---Design-System.?node-id=10-597)
+  (collections *Bookd Primitives* and *Bookd Semantic*, Dark and Light modes).
+  The JSON is the source of truth; Figma is kept in step by hand.
+- **Use semantic tokens in components** (`--bookd-bg-*`, `--bookd-text-*`,
+  `--bookd-border-*`, `--bookd-action-*`, `--bookd-focus-*`, `--bookd-status-*`,
+  `--bookd-gradient-*`). Palette tokens (`--bookd-color-*`) exist for semantic tokens
+  to reference.
+- Typography styles are role-based font shorthands: `font: var(--bookd-type-h2)`,
+  `var(--bookd-type-body)`, `var(--bookd-type-button)` and so on.
+- Dark is the default theme. Use `data-bookd-theme="light" | "dark"` on `<html>` or
+  any subtree (`setTheme()` from `src/tokens`). Storybook has a Theme toolbar.
+- **White cards are light islands:** add `data-bookd-theme="light"` to a white card
+  on the dark shell so the tokens inside it invert.
+- In TypeScript, `vars['bookd-text-accent']` gives `'var(--bookd-text-accent)'` with autocomplete.
 
 ## Structure
 

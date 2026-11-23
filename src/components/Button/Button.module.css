@@ -1,40 +1,93 @@
+/* Bookd Button: Gradient Ticket direction. Semantic tokens only. */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--bookd-space-2);
   border: var(--bookd-border-width-1) solid transparent;
-  border-radius: var(--bookd-radius-md);
-  font: var(--bookd-type-sm-emphasized);
+  border-radius: var(--bookd-radius-pill);
+  font: var(--bookd-type-button);
+  text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
-  transition: background-color 120ms ease, border-color 120ms ease;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
 }
 
 .button:focus-visible {
-  outline: var(--bookd-border-width-2) solid var(--bookd-brand-base);
+  outline: var(--bookd-border-width-2) solid var(--bookd-focus-ring);
   outline-offset: var(--bookd-space-0-5);
 }
 
-.button:disabled {
-  cursor: not-allowed;
-  background: var(--bookd-bg-weak-50);
-  color: var(--bookd-text-disabled-400);
-  border-color: transparent;
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.sm { height: 32px; padding: 0 var(--bookd-space-3); }
-.md { height: 40px; padding: 0 var(--bookd-space-4); }
-.lg { height: 48px; padding: 0 var(--bookd-space-5); font: var(--bookd-type-base-emphasized); }
+/* Sizes. md and lg meet the 44px touch target. */
+.sm { min-height: 36px; padding: 0 var(--bookd-space-4); font: var(--bookd-type-button-sm); }
+.md { min-height: 44px; padding: 0 var(--bookd-space-5); }
+.lg { min-height: 52px; padding: 0 var(--bookd-space-6); }
+.fullWidth { width: 100%; }
 
-.primary { background: var(--bookd-brand-base); color: var(--bookd-text-on-color-strong); }
-.primary:hover:not(:disabled) { background: var(--bookd-brand-dark); }
+/* Primary: gradient over a solid fallback. Label is dark: white fails AA on the pink stop. */
+.primary {
+  background-color: var(--bookd-action-primary-fallback);
+  background-image: var(--bookd-gradient-action-primary);
+  color: var(--bookd-text-on-action);
+}
+.primary:hover:not(:disabled, .loading) { background-image: var(--bookd-gradient-action-primary-hover); }
+.primary:active:not(:disabled, .loading) { background-image: var(--bookd-gradient-action-primary-pressed); }
+
+.primary-solid {
+  background-color: var(--bookd-action-primary-fallback);
+  color: var(--bookd-text-on-action);
+}
+.primary-solid:hover:not(:disabled, .loading) { background-color: var(--bookd-action-primary-fallback-hover); }
+.primary-solid:active:not(:disabled, .loading) { background-color: var(--bookd-action-primary-fallback-pressed); }
 
 .secondary {
-  background: var(--bookd-bg-white-0);
-  color: var(--bookd-text-strong-950);
-  border-color: var(--bookd-border-sub-200);
+  background-color: transparent;
+  border-color: var(--bookd-border-contrast);
+  color: var(--bookd-text-primary);
 }
-.secondary:hover:not(:disabled) { background: var(--bookd-bg-weak-50); }
+.secondary:hover:not(:disabled, .loading) { background-color: var(--bookd-bg-surface-hover); }
+.secondary:active:not(:disabled, .loading) { background-color: var(--bookd-bg-surface); }
 
-.ghost { background: transparent; color: var(--bookd-text-sub-700); }
-.ghost:hover:not(:disabled) { background: var(--bookd-bg-weak-50); color: var(--bookd-text-strong-950); }
+.tertiary {
+  background-color: transparent;
+  color: var(--bookd-text-accent);
+}
+.tertiary:hover:not(:disabled, .loading) { background-color: var(--bookd-bg-surface-hover); }
+.tertiary:active:not(:disabled, .loading) { background-color: var(--bookd-bg-surface); }
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: var(--bookd-bg-disabled);
+  background-image: none;
+  border-color: transparent;
+  color: var(--bookd-text-disabled);
+}
+
+.loading { cursor: progress; }
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: bookd-spin 700ms linear infinite;
+}
+
+@keyframes bookd-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+  .spinner { animation-duration: 2s; }
+}

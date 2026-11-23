@@ -1,360 +1,193 @@
 {
   "semantic": {
-    "static": {
-      "white": {
-        "$type": "color",
-        "$value": "{color.gray.0}"
-      },
-      "black": {
-        "$type": "color",
-        "$value": "{color.gray.950}"
-      },
-      "white-alpha-45": {
-        "$type": "color",
-        "$value": "#ffffff73"
-      }
-    },
     "bg": {
-      "white-0": {
+      "canvas": {
         "$type": "color",
-        "$value": "{color.gray.0}"
+        "$value": "{color.gray.50}",
+        "$description": "Main app background."
       },
-      "weak-50": {
+      "surface": {
         "$type": "color",
-        "$value": "{color.gray.50}"
+        "$value": "{color.white}",
+        "$description": "Secondary container, search field."
       },
-      "soft-100": {
+      "surface-hover": {
         "$type": "color",
-        "$value": "{color.gray.100}"
+        "$value": "{color.gray.100}",
+        "$description": "Hover on surface and secondary/tertiary buttons."
       },
-      "sub-200": {
+      "card": {
         "$type": "color",
-        "$value": "{color.gray.200}"
+        "$value": "{color.white}",
+        "$description": "Venue and ticket cards. White in both themes."
       },
-      "sub-300": {
+      "card-muted": {
         "$type": "color",
-        "$value": "{color.gray.300}"
+        "$value": "{color.gray.100}",
+        "$description": "Supporting block inside a card."
       },
-      "surface-800": {
+      "disabled": {
         "$type": "color",
-        "$value": "{color.gray.800}"
-      },
-      "strong-950": {
-        "$type": "color",
-        "$value": "{color.gray.950}"
-      },
-      "glass": {
-        "$type": "color",
-        "$value": "{color.alpha.white.alpha-72}"
-      },
-      "scrim": {
-        "$type": "color",
-        "$value": "#00000066"
+        "$value": "{color.gray.100}",
+        "$description": "Disabled control fill."
       }
     },
     "text": {
-      "white-0": {
+      "primary": {
         "$type": "color",
-        "$value": "{color.gray.0}"
+        "$value": "{color.charcoal.950}"
       },
-      "disabled-400": {
-        "$type": "color",
-        "$value": "{color.gray.400}"
-      },
-      "soft-500": {
-        "$type": "color",
-        "$value": "{color.gray.500}"
-      },
-      "sub-700": {
+      "secondary": {
         "$type": "color",
         "$value": "{color.gray.700}"
       },
-      "strong-950": {
+      "disabled": {
         "$type": "color",
-        "$value": "{color.gray.950}"
+        "$value": "{color.gray.400}",
+        "$description": "Disabled text. Exempt from contrast minimums."
       },
-      "on-color-strong": {
+      "accent": {
         "$type": "color",
-        "$value": "{color.gray.0}"
+        "$value": "{color.pink.700}",
+        "$description": "Links, 'View all', eyebrow labels. QA: pink.500 fails on surfaces."
       },
-      "on-color-subtle": {
+      "on-action": {
         "$type": "color",
-        "$value": "{color.alpha.white.alpha-88}"
-      }
-    },
-    "fg": {
-      "white-0": {
-        "$type": "color",
-        "$value": "{color.gray.0}"
-      },
-      "disabled-400": {
-        "$type": "color",
-        "$value": "{color.gray.400}"
-      },
-      "soft-500": {
-        "$type": "color",
-        "$value": "{color.gray.500}"
-      },
-      "sub-700": {
-        "$type": "color",
-        "$value": "{color.gray.700}"
-      },
-      "strong-950": {
-        "$type": "color",
-        "$value": "{color.gray.950}"
-      }
-    },
-    "icon": {
-      "on-color": {
-        "$type": "color",
-        "$value": "{color.gray.0}"
+        "$value": "{color.charcoal.950}",
+        "$description": "Label on the gradient/pink CTA. QA: white fails (3.5:1)."
       }
     },
     "border": {
-      "white-0": {
+      "subtle": {
         "$type": "color",
-        "$value": "{color.gray.0}"
+        "$value": "{color.gray.200}",
+        "$description": "Decorative dividers only."
       },
-      "soft-100": {
+      "control": {
         "$type": "color",
-        "$value": "{color.gray.100}"
+        "$value": "{color.gray.500}",
+        "$description": "Input and control boundaries, meets 3:1."
       },
-      "sub-200": {
+      "contrast": {
         "$type": "color",
-        "$value": "{color.gray.200}"
+        "$value": "{color.charcoal.950}",
+        "$description": "Secondary button outline."
       },
-      "strong-950": {
+      "card": {
         "$type": "color",
-        "$value": "{color.gray.950}"
+        "$value": "{color.gray.200}",
+        "$description": "Edge of a white card. Cards on the dark shell are light islands, so this is the same in both themes."
       }
     },
-    "glass": {
-      "border": {
-        "$type": "color",
-        "$value": "#ffffff80"
+    "action": {
+      "primary": {
+        "fallback": {
+          "$type": "color",
+          "$value": "{color.pink.500}",
+          "$description": "Solid CTA when a gradient can't be used."
+        },
+        "fallback-hover": {
+          "$type": "color",
+          "$value": "{color.pink.400}"
+        },
+        "fallback-pressed": {
+          "$type": "color",
+          "$value": "{color.pink.600}"
+        }
       }
     },
-    "brand": {
-      "lighter": {
+    "focus": {
+      "ring": {
         "$type": "color",
-        "$value": "{color.blue.50}"
-      },
-      "light": {
-        "$type": "color",
-        "$value": "{color.blue.100}"
-      },
-      "base": {
-        "$type": "color",
-        "$value": "{color.blue.500}"
-      },
-      "dark": {
-        "$type": "color",
-        "$value": "{color.blue.700}"
-      },
-      "darker": {
-        "$type": "color",
-        "$value": "{color.blue.800}"
-      },
-      "alpha-10": {
-        "$type": "color",
-        "$value": "{color.alpha.blue.alpha-10}"
-      },
-      "alpha-16": {
-        "$type": "color",
-        "$value": "{color.alpha.blue.alpha-16}"
-      },
-      "alpha-24": {
-        "$type": "color",
-        "$value": "{color.alpha.blue.alpha-24}"
+        "$value": "{color.pink.700}",
+        "$description": "Focus-visible outline, 3:1 against canvas, surface and card in its theme."
       }
     },
-    "state": {
-      "pressed-on-strong": {
-        "$type": "color",
-        "$value": "{color.alpha.white.alpha-10}"
-      },
-      "faded": {
-        "lighter-50": {
+    "status": {
+      "confirmed": {
+        "fg": {
           "$type": "color",
-          "$value": "{color.gray.50}"
+          "$value": "{color.green.600}"
         },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.gray.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.gray.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.gray.950}"
-        }
-      },
-      "error": {
-        "dark-700": {
-          "$type": "color",
-          "$value": "{color.red.700}"
-        },
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.red.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.red.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.red.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.red.950}"
-        }
-      },
-      "information": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.blue.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.blue.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.blue.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.blue.950}"
-        }
-      },
-      "warning": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.orange.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.orange.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.orange.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.orange.950}"
-        }
-      },
-      "away": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.yellow.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.yellow.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.yellow.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.yellow.950}"
-        }
-      },
-      "success": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.green.50}"
-        },
-        "light-200": {
+        "bg": {
           "$type": "color",
           "$value": "{color.green.200}"
         },
-        "base-500": {
+        "$description": "Booked and accepted."
+      },
+      "pending": {
+        "fg": {
           "$type": "color",
-          "$value": "{color.green.500}"
+          "$value": "{color.amber.700}"
         },
-        "dark-950": {
+        "bg": {
           "$type": "color",
-          "$value": "{color.green.950}"
+          "$value": "{color.amber.100}"
+        },
+        "$description": "Awaiting action."
+      },
+      "declined": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.red.700}"
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.red.100}"
+        },
+        "$description": "Declined or canceled."
+      },
+      "open": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.pink.700}"
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.lilac.100}"
+        },
+        "$description": "Open gig or accepting inquiries."
+      },
+      "unknown": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.gray.700}"
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.gray.100}"
+        },
+        "$description": "Unverified or stale venue info."
+      }
+    },
+    "gradient": {
+      "action": {
+        "primary": {
+          "$type": "gradient",
+          "$value": "linear-gradient(110deg, {color.pink.500} 0%, {color.purple.500} 100%)",
+          "$description": "Primary CTA. Use with text.on-action."
+        },
+        "primary-hover": {
+          "$type": "gradient",
+          "$value": "linear-gradient(110deg, {color.pink.400} 0%, {color.purple.400} 100%)"
+        },
+        "primary-pressed": {
+          "$type": "gradient",
+          "$value": "linear-gradient(110deg, {color.pink.600} 0%, {color.purple.600} 100%)"
         }
       },
-      "feature": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.purple.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.purple.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.purple.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.purple.950}"
+      "brand": {
+        "soft": {
+          "$type": "gradient",
+          "$value": "linear-gradient(125deg, {color.lilac.100} 0%, {color.white} 100%)",
+          "$description": "Soft highlight panels."
         }
       },
-      "verified": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.sky.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.sky.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.sky.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.sky.950}"
-        }
-      },
-      "highlighted": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.pink.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.pink.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.pink.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.pink.950}"
-        }
-      },
-      "stable": {
-        "lighter-50": {
-          "$type": "color",
-          "$value": "{color.teal.50}"
-        },
-        "light-200": {
-          "$type": "color",
-          "$value": "{color.teal.200}"
-        },
-        "base-500": {
-          "$type": "color",
-          "$value": "{color.teal.500}"
-        },
-        "dark-950": {
-          "$type": "color",
-          "$value": "{color.teal.950}"
+      "media": {
+        "scrim": {
+          "$type": "gradient",
+          "$value": "linear-gradient(180deg, rgba(11, 11, 15, 0) 25%, rgba(11, 11, 15, 0.9) 100%)",
+          "$description": "Text over photography."
         }
       }
     }

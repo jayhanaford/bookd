@@ -1,663 +1,139 @@
 {
   "color": {
+    "white": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Light cards, text on dark. Source: Gradient Ticket board."
+    },
+    "charcoal": {
+      "950": {
+        "$type": "color",
+        "$value": "#0B0B0F",
+        "$description": "Base dark canvas. Source: board."
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#232329",
+        "$description": "Elevated dark surface, search bar. Proposal."
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#34343B",
+        "$description": "Dark dividers. Proposal."
+      }
+    },
     "gray": {
-      "0": {
-        "$type": "color",
-        "$value": "#ffffff"
-      },
       "50": {
         "$type": "color",
-        "$value": "#f4f5f5"
+        "$value": "#F5F5F8",
+        "$description": "Light-theme canvas. Added in token QA."
       },
       "100": {
         "$type": "color",
-        "$value": "#e9e9ea"
+        "$value": "#EAEAF0",
+        "$description": "Soft surface, light dividers. Source: board."
       },
       "200": {
         "$type": "color",
-        "$value": "#d1d1d6"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#c7c7cc"
+        "$value": "#D6D6DE",
+        "$description": "Light-theme subtle border. Added in token QA."
       },
       "400": {
         "$type": "color",
-        "$value": "#aeaeb2"
+        "$value": "#A6A6B0",
+        "$description": "Secondary text on dark. Proposal, QA passed."
       },
       "500": {
         "$type": "color",
-        "$value": "#8e8e93"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#636366"
+        "$value": "#75757F",
+        "$description": "Control boundaries (3:1) on light and dark. Added in token QA."
       },
       "700": {
         "$type": "color",
-        "$value": "#48484a"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#2f2f31"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#242427"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#0e0e0f"
-      }
-    },
-    "blue": {
-      "50": {
-        "$type": "color",
-        "$value": "#eff6ff"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#dbeafe"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#bedbff"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#82bfff"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#2b7fff"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#155dfc"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#1447e6"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#193cb8"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#1c398e"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#0d2673"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#132150"
-      }
-    },
-    "red": {
-      "50": {
-        "$type": "color",
-        "$value": "#fef2f2"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#ffe2e2"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#ffc9c9"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#ffa2a2"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#ff6467"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#fb2c36"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#e7000b"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#c10007"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#9f0712"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#82181a"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#460809"
-      }
-    },
-    "orange": {
-      "50": {
-        "$type": "color",
-        "$value": "#fff7ed"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#ffedd4"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#ffd6a7"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#ffb86a"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#ff8904"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#ff6900"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#f54900"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#ca3500"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#9f2d00"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#7e2a0c"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#441306"
-      }
-    },
-    "yellow": {
-      "50": {
-        "$type": "color",
-        "$value": "#fffbeb"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#fef3c6"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#fee685"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#ffd230"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#ffb900"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#fe9a00"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#e17100"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#bb4d00"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#973c00"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#7b3306"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#461901"
-      }
-    },
-    "green": {
-      "50": {
-        "$type": "color",
-        "$value": "#f0fdf4"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#dcfce7"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#bbf7d0"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#86efac"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#4ade80"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#22c55e"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#16a34a"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#15803d"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#166534"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#14532d"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#09361b"
-      }
-    },
-    "purple": {
-      "50": {
-        "$type": "color",
-        "$value": "#efebff"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#dcd5ff"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#cac0ff"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#a897ff"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#8c71f6"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#7d52f4"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#693ee0"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#5b2cc9"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#4c25a7"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#3d1d86"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#351a75"
-      }
-    },
-    "sky": {
-      "50": {
-        "$type": "color",
-        "$value": "#ebf8ff"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#d5f1ff"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#c0eaff"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#97dcff"
-      },
-      "400": {
-        "$type": "color",
-        "$value": "#68cdff"
-      },
-      "500": {
-        "$type": "color",
-        "$value": "#47c2ff"
-      },
-      "600": {
-        "$type": "color",
-        "$value": "#35ade9"
-      },
-      "700": {
-        "$type": "color",
-        "$value": "#2597d0"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#1f7ead"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#18658b"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#124b68"
+        "$value": "#44444D",
+        "$description": "Secondary text on light. Proposal."
       }
     },
     "pink": {
-      "50": {
-        "$type": "color",
-        "$value": "#ffebf4"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#ffd5ea"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#ffc0df"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#ff97cb"
-      },
       "400": {
         "$type": "color",
-        "$value": "#ff68b3"
+        "$value": "#FF5C9F",
+        "$description": "Accent text and focus on dark; gradient hover start. Added in token QA."
       },
       "500": {
         "$type": "color",
-        "$value": "#fb4ba3"
+        "$value": "#FF2E88",
+        "$description": "Gradient start, solid CTA fallback. Source: board."
       },
       "600": {
         "$type": "color",
-        "$value": "#e9358f"
+        "$value": "#F0207C",
+        "$description": "Gradient pressed start. Added in token QA."
       },
       "700": {
         "$type": "color",
-        "$value": "#d0257a"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#ad1f66"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#8b1852"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#68123d"
+        "$value": "#B3134F",
+        "$description": "Accent text and focus on light surfaces. Added in token QA."
       }
     },
-    "teal": {
-      "50": {
-        "$type": "color",
-        "$value": "#e4fbf8"
-      },
-      "100": {
-        "$type": "color",
-        "$value": "#d0fbf5"
-      },
-      "200": {
-        "$type": "color",
-        "$value": "#c2f5ee"
-      },
-      "300": {
-        "$type": "color",
-        "$value": "#84ebdd"
-      },
+    "purple": {
       "400": {
         "$type": "color",
-        "$value": "#3fdec9"
+        "$value": "#D46BFF",
+        "$description": "Gradient hover end. Added in token QA."
       },
       "500": {
         "$type": "color",
-        "$value": "#22d3bb"
+        "$value": "#C83BFF",
+        "$description": "Gradient end. Source: board."
       },
       "600": {
         "$type": "color",
-        "$value": "#1daf9c"
+        "$value": "#BC34F2",
+        "$description": "Gradient pressed end. Added in token QA."
+      }
+    },
+    "lilac": {
+      "100": {
+        "$type": "color",
+        "$value": "#F9D8F5",
+        "$description": "Soft tint, open-gig fill. Source: board."
+      }
+    },
+    "green": {
+      "200": {
+        "$type": "color",
+        "$value": "#DDF6E4",
+        "$description": "Confirmed fill. Proposal."
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#26794C",
+        "$description": "Confirmed text. Proposal."
+      }
+    },
+    "amber": {
+      "100": {
+        "$type": "color",
+        "$value": "#FFF0CD",
+        "$description": "Pending fill. Proposal."
       },
       "700": {
         "$type": "color",
-        "$value": "#178c7d"
-      },
-      "800": {
-        "$type": "color",
-        "$value": "#1a7569"
-      },
-      "900": {
-        "$type": "color",
-        "$value": "#16645a"
-      },
-      "950": {
-        "$type": "color",
-        "$value": "#0b463e"
+        "$value": "#85550C",
+        "$description": "Pending text. Proposal."
       }
     },
-    "alpha": {
-      "white": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#ffffff1a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#ffffff29"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#ffffff3d"
-        },
-        "alpha-72": {
-          "$type": "color",
-          "$value": "#ffffffb8"
-        },
-        "alpha-88": {
-          "$type": "color",
-          "$value": "#ffffffe0"
-        },
-        "alpha-92": {
-          "$type": "color",
-          "$value": "#ffffffeb"
-        }
+    "red": {
+      "100": {
+        "$type": "color",
+        "$value": "#FCE5EA",
+        "$description": "Declined fill. Proposal."
       },
-      "black": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#0307121a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#03071229"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#0307123d"
-        }
-      },
-      "gray": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#6a72821a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#6a728229"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#6a72823d"
-        }
-      },
-      "blue": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#2b7fff1a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#2b7fff29"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#2b7fff3d"
-        }
-      },
-      "red": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#fb2c361a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#fb2c3629"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#fb2c363d"
-        }
-      },
-      "orange": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#ff69001a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#ff690029"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#ff69003d"
-        }
-      },
-      "yellow": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#fe9a001a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#fe9a0029"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#fe9a003d"
-        }
-      },
-      "green": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#22c55e1a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#22c55e29"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#22c55e3d"
-        }
-      },
-      "purple": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#7d52f41a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#7d52f429"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#7d52f43d"
-        }
-      },
-      "sky": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#47c2ff1a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#47c2ff29"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#47c2ff3d"
-        }
-      },
-      "pink": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#fb4ba31a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#fb4ba329"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#fb4ba33d"
-        }
-      },
-      "teal": {
-        "alpha-10": {
-          "$type": "color",
-          "$value": "#22d3bb1a"
-        },
-        "alpha-16": {
-          "$type": "color",
-          "$value": "#22d3bb29"
-        },
-        "alpha-24": {
-          "$type": "color",
-          "$value": "#22d3bb3d"
-        }
-      },
-      "gray-900": {
-        "alpha-55": {
-          "$type": "color",
-          "$value": "#2424268c"
-        },
-        "alpha-72": {
-          "$type": "color",
-          "$value": "#242426b8"
-        },
-        "alpha-88": {
-          "$type": "color",
-          "$value": "#242426e0"
-        }
+      "700": {
+        "$type": "color",
+        "$value": "#992F44",
+        "$description": "Declined text. Proposal."
       }
     }
   },
@@ -762,35 +238,23 @@
     },
     "sm": {
       "$type": "dimension",
-      "$value": "2px"
-    },
-    "base": {
-      "$type": "dimension",
-      "$value": "4px"
+      "$value": "8px"
     },
     "md": {
       "$type": "dimension",
-      "$value": "8px"
+      "$value": "12px"
     },
     "lg": {
       "$type": "dimension",
-      "$value": "12px"
+      "$value": "16px"
     },
     "xl": {
       "$type": "dimension",
-      "$value": "18px"
-    },
-    "2xl": {
-      "$type": "dimension",
       "$value": "24px"
     },
-    "3xl": {
+    "pill": {
       "$type": "dimension",
-      "$value": "32px"
-    },
-    "full": {
-      "$type": "dimension",
-      "$value": "9999px"
+      "$value": "999px"
     }
   },
   "border-width": {
@@ -915,44 +379,6 @@
           "spread": "-5px"
         }
       ]
-    },
-    "xl": {
-      "$type": "shadow",
-      "$value": [
-        {
-          "color": "#00000014",
-          "offsetX": "0px",
-          "offsetY": "14px",
-          "blur": "20px",
-          "spread": "-5px"
-        },
-        {
-          "color": "#0000001a",
-          "offsetX": "0px",
-          "offsetY": "6px",
-          "blur": "10px",
-          "spread": "-5px"
-        }
-      ]
-    },
-    "2xl": {
-      "$type": "shadow",
-      "$value": [
-        {
-          "color": "#0000001f",
-          "offsetX": "0px",
-          "offsetY": "25px",
-          "blur": "30px",
-          "spread": "-6px"
-        },
-        {
-          "color": "#0000001f",
-          "offsetX": "0px",
-          "offsetY": "8px",
-          "blur": "10px",
-          "spread": "-6px"
-        }
-      ]
     }
   },
   "blur": {
@@ -974,17 +400,15 @@
     }
   },
   "font-family": {
-    "body": {
-      "$type": "fontFamily",
-      "$value": "\"Inter\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    },
     "heading": {
       "$type": "fontFamily",
-      "$value": "\"Inter\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      "$value": "\"Plus Jakarta Sans\", \"Inter\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "$description": "Headlines, UI titles, buttons."
     },
-    "system": {
+    "body": {
       "$type": "fontFamily",
-      "$value": "\"Inter\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      "$value": "\"Inter\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "$description": "Body, labels, metadata."
     }
   },
   "font-size": {
@@ -1006,27 +430,15 @@
     },
     "xl": {
       "$type": "dimension",
-      "$value": "20px"
+      "$value": "22px"
     },
     "2xl": {
       "$type": "dimension",
-      "$value": "24px"
+      "$value": "28px"
     },
     "3xl": {
       "$type": "dimension",
-      "$value": "30px"
-    },
-    "4xl": {
-      "$type": "dimension",
-      "$value": "36px"
-    },
-    "5xl": {
-      "$type": "dimension",
-      "$value": "48px"
-    },
-    "6xl": {
-      "$type": "dimension",
-      "$value": "60px"
+      "$value": "32px"
     }
   },
   "line-height": {
@@ -1042,43 +454,35 @@
       "$type": "dimension",
       "$value": "24px"
     },
-    "lg": {
-      "$type": "dimension",
-      "$value": "28px"
-    },
     "xl": {
       "$type": "dimension",
       "$value": "28px"
     },
     "2xl": {
       "$type": "dimension",
-      "$value": "32px"
+      "$value": "34px"
     },
     "3xl": {
       "$type": "dimension",
-      "$value": "36px"
-    },
-    "4xl": {
-      "$type": "dimension",
-      "$value": "40px"
-    },
-    "5xl": {
-      "$type": "dimension",
-      "$value": "52px"
-    },
-    "6xl": {
-      "$type": "dimension",
-      "$value": "64px"
+      "$value": "38px"
     }
   },
   "font-weight": {
-    "default": {
+    "regular": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "emphasized": {
+    "medium": {
+      "$type": "fontWeight",
+      "$value": 500
+    },
+    "semibold": {
       "$type": "fontWeight",
       "$value": 600
+    },
+    "bold": {
+      "$type": "fontWeight",
+      "$value": 700
     }
   },
   "letter-spacing": {
@@ -1089,232 +493,129 @@
     "normal": {
       "$type": "dimension",
       "$value": "0px"
-    },
-    "wide": {
-      "$type": "dimension",
-      "$value": "0.1px"
     }
   },
   "type": {
-    "xs": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.xs}",
-          "lineHeight": "{line-height.xs}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.wide}"
-        }
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.heading}",
+        "fontSize": "{font-size.3xl}",
+        "lineHeight": "{line-height.3xl}",
+        "fontWeight": "{font-weight.bold}",
+        "letterSpacing": "{letter-spacing.tight}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.xs}",
-          "lineHeight": "{line-height.xs}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.wide}"
-        }
-      }
+      "$description": "32/38 700"
     },
-    "sm": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.sm}",
-          "lineHeight": "{line-height.sm}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.wide}"
-        }
+    "h1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.heading}",
+        "fontSize": "{font-size.2xl}",
+        "lineHeight": "{line-height.2xl}",
+        "fontWeight": "{font-weight.bold}",
+        "letterSpacing": "{letter-spacing.tight}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.sm}",
-          "lineHeight": "{line-height.sm}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.wide}"
-        }
-      }
+      "$description": "28/34 700"
     },
-    "base": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.base}",
-          "lineHeight": "{line-height.base}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.normal}"
-        }
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.heading}",
+        "fontSize": "{font-size.xl}",
+        "lineHeight": "{line-height.xl}",
+        "fontWeight": "{font-weight.bold}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.base}",
-          "lineHeight": "{line-height.base}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.normal}"
-        }
-      }
+      "$description": "22/28 700"
     },
-    "lg": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.lg}",
-          "lineHeight": "{line-height.lg}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.normal}"
-        }
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.heading}",
+        "fontSize": "{font-size.lg}",
+        "lineHeight": "{line-height.base}",
+        "fontWeight": "{font-weight.semibold}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.lg}",
-          "lineHeight": "{line-height.lg}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.normal}"
-        }
-      }
+      "$description": "18/24 600"
     },
-    "xl": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.xl}",
-          "lineHeight": "{line-height.xl}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.normal}"
-        }
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontSize": "{font-size.base}",
+        "lineHeight": "{line-height.base}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.body}",
-          "fontSize": "{font-size.xl}",
-          "lineHeight": "{line-height.xl}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.normal}"
-        }
-      }
+      "$description": "16/24 400"
     },
-    "2xl": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.2xl}",
-          "lineHeight": "{line-height.2xl}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
+    "body-strong": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontSize": "{font-size.base}",
+        "lineHeight": "{line-height.base}",
+        "fontWeight": "{font-weight.semibold}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.2xl}",
-          "lineHeight": "{line-height.2xl}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
-      }
+      "$description": "16/24 600"
     },
-    "3xl": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.3xl}",
-          "lineHeight": "{line-height.3xl}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
+    "secondary": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontSize": "{font-size.sm}",
+        "lineHeight": "{line-height.sm}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.3xl}",
-          "lineHeight": "{line-height.3xl}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
-      }
+      "$description": "14/20 400"
     },
-    "4xl": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.4xl}",
-          "lineHeight": "{line-height.4xl}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontSize": "{font-size.sm}",
+        "lineHeight": "{line-height.sm}",
+        "fontWeight": "{font-weight.semibold}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.4xl}",
-          "lineHeight": "{line-height.4xl}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
-      }
+      "$description": "14/20 600, chips and form labels"
     },
-    "5xl": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.5xl}",
-          "lineHeight": "{line-height.5xl}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontSize": "{font-size.xs}",
+        "lineHeight": "{line-height.xs}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.5xl}",
-          "lineHeight": "{line-height.5xl}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
-      }
+      "$description": "12/16 500"
     },
-    "6xl": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.6xl}",
-          "lineHeight": "{line-height.6xl}",
-          "fontWeight": "{font-weight.default}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
+    "button": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.heading}",
+        "fontSize": "{font-size.base}",
+        "lineHeight": "{line-height.base}",
+        "fontWeight": "{font-weight.bold}",
+        "letterSpacing": "{letter-spacing.normal}"
       },
-      "emphasized": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{font-family.heading}",
-          "fontSize": "{font-size.6xl}",
-          "lineHeight": "{line-height.6xl}",
-          "fontWeight": "{font-weight.emphasized}",
-          "letterSpacing": "{letter-spacing.tight}"
-        }
-      }
+      "$description": "16/24 700, Plus Jakarta Sans"
+    },
+    "button-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.heading}",
+        "fontSize": "{font-size.sm}",
+        "lineHeight": "{line-height.sm}",
+        "fontWeight": "{font-weight.bold}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$description": "14/20 700, Plus Jakarta Sans"
     }
   }
 }

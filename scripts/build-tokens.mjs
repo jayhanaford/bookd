@@ -86,6 +86,7 @@ const theme = (name, selector) =>
 
 await base.buildAllPlatforms();
 await tsMap.buildAllPlatforms();
-await theme('light', ':root, [data-bookd-theme="light"]').buildAllPlatforms();
-await theme('dark', '[data-bookd-theme="dark"]').buildAllPlatforms();
+// Gradient Ticket is dark-first: dark is the default on :root, light is opt-in.
+await theme('dark', ':root, [data-bookd-theme="dark"]').buildAllPlatforms();
+await theme('light', '[data-bookd-theme="light"]').buildAllPlatforms();
 console.log('✓ Bookd tokens built to src/tokens/generated/');
