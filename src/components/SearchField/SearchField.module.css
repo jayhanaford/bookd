@@ -1,0 +1,95 @@
+/* Bookd SearchField. Dark pill on the shell; inverts inside light islands. */
+.root {
+  display: grid;
+  gap: var(--bookd-space-2);
+}
+
+.label {
+  font: var(--bookd-type-label);
+  color: var(--bookd-text-primary);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--bookd-space-1);
+  min-height: 48px;
+  padding: 0 var(--bookd-space-1) 0 var(--bookd-space-4);
+  border: var(--bookd-border-width-1) solid var(--bookd-border-control);
+  border-radius: var(--bookd-radius-pill);
+  background: var(--bookd-bg-surface);
+  color: var(--bookd-text-primary);
+}
+
+.field:has(.input:focus-visible) {
+  outline: var(--bookd-border-width-2) solid var(--bookd-focus-ring);
+  outline-offset: var(--bookd-space-0-5);
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--bookd-text-secondary);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 var(--bookd-space-1);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: var(--bookd-type-body);
+  outline: none;
+}
+
+.input::placeholder { color: var(--bookd-text-secondary); opacity: 1; }
+
+/* Hide the browser's own clear control: Bookd draws an accessible one. */
+.input::-webkit-search-cancel-button { appearance: none; }
+
+.iconButton {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border: 0;
+  border-radius: var(--bookd-radius-pill);
+  background: transparent;
+  color: var(--bookd-text-primary);
+  cursor: pointer;
+}
+.iconButton svg { width: 20px; height: 20px; }
+.iconButton:hover { background: var(--bookd-bg-surface-hover); }
+.iconButton:focus-visible {
+  outline: var(--bookd-border-width-2) solid var(--bookd-focus-ring);
+  outline-offset: calc(var(--bookd-space-0-5) * -1);
+}
+
+.filterCount {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: var(--bookd-radius-pill);
+  background: var(--bookd-action-primary-fallback);
+  color: var(--bookd-text-on-action);
+  font: var(--bookd-type-caption);
+  line-height: 18px;
+  text-align: center;
+}

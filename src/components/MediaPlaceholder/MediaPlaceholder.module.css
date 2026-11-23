@@ -1,0 +1,22 @@
+/* Stage-light glow built from the brand gradient stops. Purely decorative. */
+.media {
+  position: relative;
+  display: grid;
+  place-items: end start;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 80% at 20% 10%, color-mix(in srgb, var(--bookd-color-pink-500) 55%, transparent), transparent 70%),
+    radial-gradient(55% 70% at 85% 25%, color-mix(in srgb, var(--bookd-color-purple-500) 50%, transparent), transparent 70%),
+    var(--bookd-color-charcoal-800);
+}
+
+.caption {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bookd-space-1-5);
+  margin: var(--bookd-space-3);
+  font: var(--bookd-type-caption);
+  color: var(--bookd-color-white);
+}
+.caption svg { width: 14px; height: 14px; }

@@ -1,0 +1,52 @@
+/* Bookd FilterChip. Outline when off, gradient when on. 36px tall, 24px+ target per WCAG 2.5.8. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bookd-space-1-5);
+  min-height: 36px;
+  padding: 0 var(--bookd-space-4);
+  border: var(--bookd-border-width-1) solid var(--bookd-border-control);
+  border-radius: var(--bookd-radius-pill);
+  background: transparent;
+  color: var(--bookd-text-primary);
+  font: var(--bookd-type-label);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.chip:hover:not(:disabled) { background-color: var(--bookd-bg-surface-hover); }
+
+.chip:focus-visible {
+  outline: var(--bookd-border-width-2) solid var(--bookd-focus-ring);
+  outline-offset: var(--bookd-space-0-5);
+}
+
+.selected,
+.selected:hover:not(:disabled) {
+  border-color: transparent;
+  background-color: var(--bookd-action-primary-fallback);
+  background-image: var(--bookd-gradient-action-primary);
+  color: var(--bookd-text-on-action);
+}
+.selected:hover:not(:disabled) { background-image: var(--bookd-gradient-action-primary-hover); }
+
+.icon { width: 16px; height: 16px; }
+.chip > svg { width: 16px; height: 16px; }
+
+.count {
+  font: var(--bookd-type-caption);
+  color: var(--bookd-text-secondary);
+}
+.selected .count { color: inherit; }
+
+.chip:disabled {
+  cursor: not-allowed;
+  border-color: transparent;
+  background: var(--bookd-bg-disabled);
+  color: var(--bookd-text-disabled);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip { transition: none; }
+}
