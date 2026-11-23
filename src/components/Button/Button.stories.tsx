@@ -19,7 +19,7 @@ const variants: ButtonVariant[] = ['primary', 'primary-solid', 'secondary', 'ter
 const row: CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: 'var(--bookd-space-3)', alignItems: 'center' };
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Components/Actions/Button',
   component: Button,
   args: { children: 'Request booking', onClick: fn() },
   argTypes: {

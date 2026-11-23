@@ -63,11 +63,41 @@ docs/token-qa.md                contrast audit and every change made to the sour
   on the dark shell so the tokens inside it invert.
 - In TypeScript, `vars['bookd-text-accent']` gives `'var(--bookd-text-accent)'` with autocomplete.
 
+## Components
+
+| Storybook group | Components |
+| --- | --- |
+| Components / Actions | Button |
+| Components / Inputs | SearchField, FilterChip |
+| Components / Display | StatusBadge, GenreTag |
+| Components / Cards | VenueCard (stacked, compact), OpportunityCard |
+| Components / Booking | BookingSummaryTicket (ticket, compact) |
+
+Import from `src/components`. White cards (VenueCard, OpportunityCard,
+BookingSummaryTicket) set `data-bookd-theme="light"` on themselves, so they work on
+the dark shell and in the light theme without extra props.
+
+Rules the components follow:
+
+- **Separate signals.** Booking process, venue availability and opportunity status are
+  separate StatusBadge sets. Venue verification is its own flag on VenueCard, because
+  a verified venue isn't necessarily booking.
+- **Never color alone.** Every badge has an icon and text; selected chips add a check.
+- **Gig pass, not admission ticket.** BookingSummaryTicket has no barcode, QR code or
+  seat. Its notches and perforation are decorative CSS masks.
+- **No fake photos.** `MediaPlaceholder` stands in until real, rights-cleared images exist.
+- **Fictional demo data** lives in `src/demo/fixtures.ts` and every story that uses it
+  says so on screen.
+- Component stories run axe with `a11y.test: 'error'`, so an accessibility violation
+  fails `npm run test:stories`.
+
 ## Structure
 
 ```
 src/
   components/   Bookd components, one folder each (component, CSS module, stories)
+  demo/         fictional demo data for stories and tests (labeled as such)
+  lib/          small helpers (date formatting)
   docs/         Storybook docs and foundation stories
   styles/       global CSS
   tokens/       token entry points (CSS + TS)

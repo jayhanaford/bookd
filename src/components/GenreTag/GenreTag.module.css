@@ -1,0 +1,22 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: var(--bookd-border-width-1) solid transparent;
+  border-radius: var(--bookd-radius-pill);
+  font: var(--bookd-type-secondary);
+  white-space: nowrap;
+}
+
+.md { min-height: 28px; padding: 0 var(--bookd-space-3); }
+.sm { min-height: 24px; padding: 0 var(--bookd-space-2-5); font: var(--bookd-type-caption); }
+
+.soft {
+  background: var(--bookd-bg-card-muted);
+  color: var(--bookd-text-primary);
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--bookd-border-control);
+  color: var(--bookd-text-primary);
+}

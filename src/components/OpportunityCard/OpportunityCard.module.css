@@ -1,0 +1,71 @@
+/* Bookd OpportunityCard. White card = light-theme island. */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--bookd-space-4);
+  padding: var(--bookd-space-4);
+  border: var(--bookd-border-width-1) solid var(--bookd-border-card);
+  border-radius: var(--bookd-radius-lg);
+  background: var(--bookd-bg-card);
+  color: var(--bookd-text-primary);
+  box-shadow: var(--bookd-shadow-sm);
+}
+
+.dateTile {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 60px;
+  height: 68px;
+  border-radius: var(--bookd-radius-md);
+  background: var(--bookd-gradient-brand-soft);
+  color: var(--bookd-text-primary);
+}
+.month { font: var(--bookd-type-caption); text-transform: uppercase; color: var(--bookd-text-accent); }
+.day { font: var(--bookd-type-h2); }
+.weekday { font: var(--bookd-type-caption); color: var(--bookd-text-secondary); }
+
+.body { display: grid; gap: var(--bookd-space-1-5); min-width: 0; }
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--bookd-space-2);
+}
+
+.title { margin: 0; font: var(--bookd-type-h3); }
+
+.link { color: inherit; text-decoration: none; }
+.link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.link::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+.link:focus-visible { outline: none; }
+.linked:has(.link:focus-visible) {
+  outline: var(--bookd-border-width-2) solid var(--bookd-focus-ring);
+  outline-offset: var(--bookd-space-0-5);
+}
+
+.venue { margin: 0; font: var(--bookd-type-body-strong); }
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bookd-space-1) var(--bookd-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: var(--bookd-type-secondary);
+  color: var(--bookd-text-secondary);
+}
+.facts li { display: inline-flex; align-items: center; gap: var(--bookd-space-1); }
+.facts svg { width: 16px; height: 16px; }
+
+.note { margin: 0; font: var(--bookd-type-secondary); color: var(--bookd-text-secondary); }
+
+.action { position: relative; z-index: 1; margin-top: var(--bookd-space-2); }
+
+/* Closed and expired: quieter, but text keeps full AA contrast. */
+.inactive { background: var(--bookd-bg-card-muted); box-shadow: none; }
+.inactive .dateTile { background: var(--bookd-bg-card); }
+.inactive .month { color: var(--bookd-text-secondary); }
