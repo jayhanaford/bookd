@@ -83,7 +83,6 @@
 @keyframes toast-in { from { opacity: 0; transform: translateY(8px); } }
 @media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
 
-.stageNote { margin: 0; font: var(--bookd-type-caption); color: var(--bookd-text-secondary); text-align: center; }
 
 /* ---------- Screen shell ---------- */
 .screen {
@@ -140,7 +139,8 @@
 .footerLight { background: var(--bookd-bg-card); color: var(--bookd-text-primary); }
 .footerRow { display: grid; grid-template-columns: auto 1fr; gap: var(--bookd-space-2); }
 
-.tabs { flex: none; padding-bottom: 22px; }
+/* Doubled class beats the component's own .nav padding, which loads later. 34px clears the home indicator. */
+.tabs.tabs { flex: none; padding-top: 10px; padding-bottom: 34px; }
 
 /* ---------- Type ---------- */
 .display { margin: 0; font: var(--bookd-type-display); letter-spacing: var(--bookd-letter-spacing-tight); }
