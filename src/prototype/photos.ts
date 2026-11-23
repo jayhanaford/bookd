@@ -3,7 +3,9 @@
  * venues or events. Always keep the "AI-generated" wording in alt text and credits.
  * See src/assets/photos/README.md.
  */
+import barnWedding from '../assets/photos/barn-wedding.jpg';
 import crowd from '../assets/photos/crowd.jpg';
+import harborPatio from '../assets/photos/harbor-patio.jpg';
 import performer from '../assets/photos/performer.jpg';
 import pianist from '../assets/photos/pianist.jpg';
 import taproom from '../assets/photos/taproom.jpg';
@@ -18,6 +20,8 @@ export const photos = {
   taproom: { src: taproom, alt: 'AI-generated photo: a waterfront taproom with a small stage at dusk' },
   crowd: { src: crowd, alt: 'AI-generated photo: a crowd watching a local set in a packed pub' },
   pianist: { src: pianist, alt: 'AI-generated photo: a pianist playing an upright piano in a café' },
+  harborPatio: { src: harborPatio, alt: 'AI-generated photo: a mandolin and upright bass duo playing on a harbor-side patio' },
+  barnWedding: { src: barnWedding, alt: 'AI-generated photo: guests dancing to a singer and keyboard player at a barn wedding' },
 } satisfies Record<string, Photo>;
 
 export type PhotoName = keyof typeof photos;

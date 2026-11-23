@@ -27,8 +27,8 @@ export function Welcome() {
     >
       <div className={s.collage} aria-hidden="true">
         <span className={s.glow} />
-        <Img photo={photos.taproom} className={s.collageLeft} />
-        <Img photo={photos.crowd} className={s.collageRight} />
+        <Img photo={photos.harborPatio} className={s.collageLeft} />
+        <Img photo={photos.barnWedding} className={s.collageRight} />
         <Img photo={photos.performer} className={s.collageCenter} />
         <span className={s.collageChip} style={{ top: 12, left: 16 }}>
           <Icon name="music" /> Folk · Acoustic
