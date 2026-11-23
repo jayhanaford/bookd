@@ -1,0 +1,25 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Bookd Design System
+
+Bookd is a local-first booking platform for musicians and venues. This Storybook
+is its own design system, independent from any other library.
+
+## How tokens work
+
+- **Source:** DTCG JSON in `/tokens`, seeded from the Bookd Figma file
+  (`primitives/foundations.json`, `themes/light.json`, `themes/dark.json`).
+- **Build:** `npm run tokens` (Style Dictionary) writes CSS custom properties and a
+  typed `vars` map to `src/tokens/generated/`. It runs automatically before dev,
+  build and Storybook.
+- **Naming:** every variable starts with `--bookd-`.
+- **Layers:** components use **semantic** tokens (`--bookd-bg-*`, `--bookd-text-*`,
+  `--bookd-brand-*`, `--bookd-state-*`). Raw palette tokens (`--bookd-color-*`)
+  are only referenced by semantic tokens.
+- **Themes:** set `data-bookd-theme="light" | "dark"` on any element. Use the
+  Theme toolbar above to switch.
+
+The values are a starting foundation and will change as Bookd's visual
+direction is defined.

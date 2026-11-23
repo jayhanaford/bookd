@@ -1,0 +1,23 @@
+@import '../tokens/index.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+html[data-bookd-theme='dark'] {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bookd-bg-white-0);
+  color: var(--bookd-text-strong-950);
+  font: var(--bookd-type-base-default);
+  -webkit-font-smoothing: antialiased;
+}
