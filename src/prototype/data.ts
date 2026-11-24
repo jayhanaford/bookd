@@ -18,9 +18,9 @@ export const openGigs: {
   posted: string;
   photo: PhotoName;
 }[] = [
-  { id: 'acoustic-friday', date: 'Fri, Dec 11', time: '8–10 PM', venue: 'The Lantern Room', pay: '$250 guarantee', style: 'Solo / duo · acoustic', distance: '0.8 mi', posted: 'posted 2h ago', photo: 'taproom' },
-  { id: 'folk-night', date: 'Sat, Dec 19', time: '6–9 PM', venue: 'Copper Kettle Café', pay: '$150 + tips', style: 'Folk · singer-songwriter', distance: '2.1 mi', posted: 'posted 1d ago', photo: 'pianist' },
-  { id: 'sunday-matinee', date: 'Sun, Jan 3', time: '1–3 PM', venue: 'The Lantern Room', pay: '$200 guarantee', style: 'Sunday matinee · acoustic', distance: '0.8 mi', posted: 'posted 3d ago', photo: 'performer' },
+  { id: 'acoustic-friday', date: 'Fri, Dec 11', time: '8–10 PM', venue: 'The Lantern Room', pay: '$250 guarantee', style: 'Solo / duo · acoustic', distance: '0.8 mi', posted: 'posted 2h ago', photo: 'lantern' },
+  { id: 'folk-night', date: 'Sat, Dec 19', time: '6–9 PM', venue: 'Copper Kettle Café', pay: '$150 + tips', style: 'Folk · singer-songwriter', distance: '2.1 mi', posted: 'posted 1d ago', photo: 'copper' },
+  { id: 'sunday-matinee', date: 'Sun, Jan 3', time: '1–3 PM', venue: 'The Lantern Room', pay: '$200 guarantee', style: 'Sunday matinee · acoustic', distance: '0.8 mi', posted: 'posted 3d ago', photo: 'lantern' },
 ];
 
 export const whoIsBooking = [
@@ -30,10 +30,10 @@ export const whoIsBooking = [
 ] as const;
 
 export const nearbyVenues = [
-  { id: 'lantern', name: 'The Lantern Room', type: 'Listening room', distance: '0.8 mi', verification: 'verified', availability: 'accepting-intros', photo: 'taproom', genres: ['Acoustic', 'Folk'] },
-  { id: 'harborside', name: 'Harborside Taproom', type: 'Brewery', distance: '1.4 mi', verification: 'unclaimed', availability: 'hosts-music', photo: 'crowd', genres: ['Live music'] },
-  { id: 'copper', name: 'Copper Kettle Café', type: 'Café', distance: '2.1 mi', verification: 'verified', availability: 'not-booking', photo: 'pianist', genres: ['Folk', 'Piano'] },
-  { id: 'fore', name: 'Fore Street Social', type: 'Restaurant & bar', distance: '3.0 mi', verification: 'unclaimed', availability: 'hosts-music', photo: 'performer', genres: ['Covers'] },
+  { id: 'lantern', name: 'The Lantern Room', type: 'Listening room', distance: '0.8 mi', verification: 'verified', availability: 'accepting-intros', photo: 'lantern', genres: ['Acoustic', 'Folk'] },
+  { id: 'harborside', name: 'Harborside Taproom', type: 'Brewery', distance: '1.4 mi', verification: 'unclaimed', availability: 'hosts-music', photo: 'harborside', genres: ['Live music'] },
+  { id: 'copper', name: 'Copper Kettle Café', type: 'Café', distance: '2.1 mi', verification: 'verified', availability: 'not-booking', photo: 'copper', genres: ['Folk', 'Piano'] },
+  { id: 'fore', name: 'Fore Street Social', type: 'Restaurant & bar', distance: '3.0 mi', verification: 'unclaimed', availability: 'hosts-music', photo: 'fore', genres: ['Covers'] },
 ] as const;
 
 export const samples = [

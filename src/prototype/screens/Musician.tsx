@@ -131,41 +131,41 @@ export function Connections() {
   const [tab, setTab] = useState('applications');
 
   const lantern: Connection = state.offerAccepted
-    ? { id: 'a1', venue: 'The Lantern Room', detail: 'Acoustic Friday · Dec 11', status: 'confirmed', note: 'You accepted offer v2', photo: 'taproom', to: 'confirmed' }
-    : { id: 'a1', venue: 'The Lantern Room', detail: 'Acoustic Friday · Dec 11', status: 'open-gig', statusLabel: 'Offer to review', note: 'Offer v2 received Dec 3', photo: 'taproom', to: 'offer' };
+    ? { id: 'a1', venue: 'The Lantern Room', detail: 'Acoustic Friday · Dec 11', status: 'confirmed', note: 'You accepted offer v2', photo: 'lantern', to: 'confirmed' }
+    : { id: 'a1', venue: 'The Lantern Room', detail: 'Acoustic Friday · Dec 11', status: 'open-gig', statusLabel: 'Offer to review', note: 'Offer v2 received Dec 3', photo: 'lantern', to: 'offer' };
 
   const groups: Record<string, { label: string; items: Connection[] }> = {
     applications: {
       label: 'Applications',
       items: [
         lantern,
-        { id: 'a2', venue: 'Copper Kettle Café', detail: 'Folk night · Dec 19', status: 'pending', statusLabel: 'Submitted', note: 'Applied Nov 21', photo: 'pianist' },
-        { id: 'a3', venue: 'Fore Street Social', detail: 'Sunday brunch set · Jan 3', status: 'declined', note: 'Venue chose another act · Nov 18', photo: 'performer' },
+        { id: 'a2', venue: 'Copper Kettle Café', detail: 'Folk night · Dec 19', status: 'pending', statusLabel: 'Submitted', note: 'Applied Nov 21', photo: 'copper' },
+        { id: 'a3', venue: 'Fore Street Social', detail: 'Sunday brunch set · Jan 3', status: 'declined', note: 'Venue chose another act · Nov 18', photo: 'fore' },
       ],
     },
     intros: {
       label: 'Intros',
       items: [
         ...(state.introSent
-          ? [{ id: 'i0', venue: 'The Lantern Room', detail: 'Introduction', status: 'pending', statusLabel: 'Sent', note: 'Sent today · reviewed weekly', photo: 'taproom', to: 'venue-verified' } as Connection]
+          ? [{ id: 'i0', venue: 'The Lantern Room', detail: 'Introduction', status: 'pending', statusLabel: 'Sent', note: 'Sent today · reviewed weekly', photo: 'lantern', to: 'venue-verified' } as Connection]
           : []),
-        { id: 'i1', venue: 'Copper Kettle Café', detail: 'Introduction', status: 'accepting-intros', statusLabel: 'Responded', note: 'Reply 1h ago', photo: 'pianist' },
+        { id: 'i1', venue: 'Copper Kettle Café', detail: 'Introduction', status: 'accepting-intros', statusLabel: 'Responded', note: 'Reply 1h ago', photo: 'copper' },
         { id: 'i2', venue: 'Tidewater Hall', detail: 'Introduction', status: 'pending', statusLabel: 'Sent', note: 'Sent Nov 12', photo: 'crowd' },
       ],
     },
     venues: {
       label: 'Venues',
       items: [
-        { id: 'v1', venue: 'The Lantern Room', detail: 'Listening room · 0.8 mi', status: 'accepting-intros', note: 'Saved', photo: 'taproom', to: 'venue-verified' },
-        { id: 'v2', venue: 'Harborside Taproom', detail: 'Brewery · 1.4 mi', status: 'hosts-music', note: 'Following · unclaimed', photo: 'crowd', to: 'venue-unclaimed' },
-        { id: 'v3', venue: 'Copper Kettle Café', detail: 'Café · 2.1 mi', status: 'not-booking', note: 'Saved', photo: 'pianist' },
-        { id: 'v4', venue: 'Fore Street Social', detail: 'Restaurant & bar · 3.0 mi', status: 'hosts-music', note: 'Saved · unclaimed', photo: 'performer' },
+        { id: 'v1', venue: 'The Lantern Room', detail: 'Listening room · 0.8 mi', status: 'accepting-intros', note: 'Saved', photo: 'lantern', to: 'venue-verified' },
+        { id: 'v2', venue: 'Harborside Taproom', detail: 'Brewery · 1.4 mi', status: 'hosts-music', note: 'Following · unclaimed', photo: 'harborside', to: 'venue-unclaimed' },
+        { id: 'v3', venue: 'Copper Kettle Café', detail: 'Café · 2.1 mi', status: 'not-booking', note: 'Saved', photo: 'copper' },
+        { id: 'v4', venue: 'Fore Street Social', detail: 'Restaurant & bar · 3.0 mi', status: 'hosts-music', note: 'Saved · unclaimed', photo: 'fore' },
       ],
     },
     outreach: {
       label: 'Outreach',
       items: [
-        { id: 'o1', venue: 'Harborside Taproom', detail: 'Emailed events@harborside.example', status: 'pending', statusLabel: 'Follow up Dec 1', note: 'Logged by you · Nov 20', photo: 'crowd', to: 'venue-unclaimed' },
+        { id: 'o1', venue: 'Harborside Taproom', detail: 'Emailed events@harborside.example', status: 'pending', statusLabel: 'Follow up Dec 1', note: 'Logged by you · Nov 20', photo: 'harborside', to: 'venue-unclaimed' },
       ],
     },
   };

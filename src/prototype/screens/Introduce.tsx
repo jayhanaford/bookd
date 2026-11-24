@@ -46,7 +46,7 @@ export function Introduce() {
       }
     >
       <div className={s.toCard}>
-        <Img photo={photos.taproom} className={s.thumb} />
+        <Img photo={photos.lantern} className={s.thumb} />
         <div className={s.rowText}>
           <span className={s.rowTitle}>
             To: The Lantern Room <Icon name="shieldCheck" size={14} className={s.accentText} />

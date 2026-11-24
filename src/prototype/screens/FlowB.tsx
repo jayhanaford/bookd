@@ -52,7 +52,7 @@ export function GigDetail() {
       }
     >
       <div className={s.gigMedia}>
-        <Img photo={photos.taproom} />
+        <Img photo={photos.lantern} />
         <StatusBadge status="open-gig" className={s.railBadge} />
       </div>
       <div className={s.titleBlock}>
@@ -341,7 +341,7 @@ export function Confirmed() {
         status="confirmed"
         venueName={gig.venue}
         headline={`${act.name} is booked`}
-        media={<Img photo={photos.taproom} />}
+        media={<Img photo={photos.lantern} />}
         actName={act.name}
         date={gig.isoDate}
         setTime={gig.times}

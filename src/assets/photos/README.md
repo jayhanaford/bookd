@@ -5,10 +5,13 @@ These photos were generated with AI in Figma (Bookd design system file, "Photo s
 | File | Figma label |
 | --- | --- |
 | `performer.jpg` | Generated · Solo performer, brick bar |
-| `taproom.jpg` | Generated · Waterfront taproom |
 | `crowd.jpg` | Generated · Crowd at local set |
 | `pianist.jpg` | Generated · Café pianist |
 | `harbor-patio.jpg` | Generated · Harbor patio duo (Welcome, left) |
 | `barn-wedding.jpg` | Generated · Barn wedding (Welcome, right) |
+| `venue-lantern-room.jpg` | Generated · venue interior: The Lantern Room |
+| `venue-harborside-taproom.jpg` | Generated · Waterfront taproom (Harborside Taproom) |
+| `venue-copper-kettle-cafe.jpg` | Generated · venue interior: Copper Kettle Café |
+| `venue-fore-street-social.jpg` | Generated · venue interior: Fore Street Social |
 
 Credit line used in the UI: "Photos are AI-generated for this mockup and show no real people or venues."
