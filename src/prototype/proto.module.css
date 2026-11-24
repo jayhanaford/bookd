@@ -394,6 +394,23 @@ button.row { cursor: pointer; }
     linear-gradient(150deg, var(--bookd-color-purple-600), var(--bookd-color-charcoal-950));
   color: var(--bookd-color-white);
 }
+.photoHero {
+  position: relative;
+  display: grid;
+  gap: var(--bookd-space-1-5);
+  padding: 170px var(--bookd-space-4) var(--bookd-space-10);
+  color: var(--bookd-color-white);
+  isolation: isolate;
+}
+.heroImg { position: absolute; inset: 0; z-index: -1; }
+/* Scrim keeps white text readable over any photo. */
+.photoHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(11, 11, 15, 0.35) 0%, rgba(11, 11, 15, 0.1) 30%, rgba(11, 11, 15, 0.85) 100%);
+}
 .heroTitle { margin: 0; font: var(--bookd-type-display); letter-spacing: var(--bookd-letter-spacing-tight); }
 .heroMeta { margin: 0; font: var(--bookd-type-secondary); }
 .tagRow { display: flex; flex-wrap: wrap; gap: var(--bookd-space-1-5); margin: var(--bookd-space-1) 0 0; padding: 0; list-style: none; }

@@ -1,12 +1,14 @@
 import { Button, GenreTag, StatusBadge } from '../../components';
 import { Icon } from '../../components/Icon';
 import { NOT_IN_PROTOTYPE, useProto } from '../nav';
-import { ListRow, Screen } from '../ui';
+import { photos, type Photo } from '../photos';
+import { Img, ListRow, Screen } from '../ui';
 import s from '../proto.module.css';
 
-function VenueHero({ name, meta, genres = [] }: { name: string; meta: string; genres?: string[] }) {
+function VenueHero({ name, meta, genres = [], photo }: { name: string; meta: string; genres?: string[]; photo: Photo }) {
   return (
-    <div className={s.gradientHero}>
+    <div className={s.photoHero}>
+      <Img photo={photo} className={s.heroImg} />
       <h1 className={s.heroTitle}>{name}</h1>
       <p className={s.heroMeta}>{meta}</p>
       {genres.length > 0 && (
@@ -43,7 +45,7 @@ export function VenueVerified() {
           { icon: 'more', label: 'More options', onClick: () => notify(NOT_IN_PROTOTYPE) },
         ],
       }}
-      hero={<VenueHero name="The Lantern Room" meta="Listening room · 120 cap · 0.8 mi · Portland, ME" genres={['Acoustic', 'Folk', 'Jazz']} />}
+      hero={<VenueHero photo={photos.lantern} name="The Lantern Room" meta="Listening room · 120 cap · 0.8 mi · Portland, ME" genres={['Acoustic', 'Folk', 'Jazz']} />}
       footer={
         <div className={s.footerRow}>
           <Button variant="secondary" onClick={toggleSave}>
@@ -116,7 +118,7 @@ export function VenueUnclaimed() {
           { icon: 'more', label: 'More options', onClick: () => notify(NOT_IN_PROTOTYPE) },
         ],
       }}
-      hero={<VenueHero name="Harborside Taproom" meta="Brewery · 1.4 mi · Portland, ME" />}
+      hero={<VenueHero photo={photos.harborside} name="Harborside Taproom" meta="Brewery · 1.4 mi · Portland, ME" />}
       footer={
         <div className={s.footerRow}>
           <Button variant="secondary" onClick={() => notify('Outreach logged. Track follow-ups in Connections › Outreach.')}>
