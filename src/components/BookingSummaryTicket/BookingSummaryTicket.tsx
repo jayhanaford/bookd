@@ -23,6 +23,10 @@ export interface BookingSummaryTicketProps extends HTMLAttributes<HTMLElement> {
   setTime: string;
   /** e.g. "40 min" or "2 x 45 min" */
   setLength?: string;
+  /** Load-in time, e.g. "7:15 PM". */
+  loadIn?: string;
+  /** Override the status badge text, e.g. "Offer sent · v2" on a pending offer. */
+  statusLabel?: string;
   /** Agreed pay as both sides accepted it, e.g. "$200 guarantee". Tracked by hand; Bookd doesn't process payments. */
   pay?: string;
   /** Manually tracked payment state, e.g. "Not paid yet". */
@@ -64,6 +68,8 @@ export function BookingSummaryTicket({
   date,
   setTime,
   setLength,
+  loadIn,
+  statusLabel,
   pay,
   paymentNote,
   headline,
@@ -97,7 +103,7 @@ export function BookingSummaryTicket({
           </div>
         </div>
         <div className={styles.stubSide}>
-          <StatusBadge status={status} size="sm" />
+          <StatusBadge status={status} label={statusLabel} size="sm" />
         </div>
       </article>
     );
@@ -109,7 +115,7 @@ export function BookingSummaryTicket({
         <div className={styles.head}>
           {media && <div className={styles.media}>{media}</div>}
           <div className={styles.headText}>
-            <StatusBadge status={status} className={styles.badge} />
+            <StatusBadge status={status} label={statusLabel} className={styles.badge} />
             <Heading id={headingId} className={styles.venue}>
               {venueName}
             </Heading>
@@ -125,6 +131,7 @@ export function BookingSummaryTicket({
             <Row icon="clock" term="Set time">{setTime}</Row>
             <Row icon="mic" term="Your act">{actName}</Row>
             {setLength && <Row icon="timer" term="Set length">{setLength}</Row>}
+            {loadIn && <Row icon="clock" term="Load-in">{loadIn}</Row>}
             <Row icon="pin" term="Venue" wide>
               {venueName}
               {venueAddress && <span className={styles.sub}>{venueAddress}</span>}

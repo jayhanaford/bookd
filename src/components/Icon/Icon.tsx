@@ -104,6 +104,59 @@ const paths = {
     </>
   ),
   pulse: <path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10.5v3" />,
+  chevronLeft: <path d="M15 5l-7 7 7 7" />,
+  chevronRight: <path d="M9 5l7 7-7 7" />,
+  chevronDown: <path d="M6 9l6 6 6-6" />,
+  heart: <path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z" />,
+  more: (
+    <>
+      <circle cx="5" cy="12" r="1" />
+      <circle cx="12" cy="12" r="1" />
+      <circle cx="19" cy="12" r="1" />
+    </>
+  ),
+  home: (
+    <>
+      <path d="M4 10.5L12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z" />
+    </>
+  ),
+  plus: <path d="M12 5v14M5 12h14" />,
+  star: <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z" />,
+  play: <path d="M8 5.5v13l10-6.5z" />,
+  video: (
+    <>
+      <rect x="3" y="6" width="13" height="12" rx="2" />
+      <path d="M16 10.5l5-3v9l-5-3" />
+    </>
+  ),
+  send: <path d="M21 3L10 14M21 3l-7 18-4-7-7-4z" />,
+  pencil: <path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4" />,
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v6M12 7.5h.01" />
+    </>
+  ),
+  list: <path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" />,
+  map: <path d="M9 4L3 6.5v13.5l6-2.5 6 2.5 6-2.5V4l-6 2.5zM9 4v13.5M15 6.5V20" />,
+  mail: (
+    <>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3.5 6.5L12 13l8.5-6.5" />
+    </>
+  ),
+  building: (
+    <>
+      <rect x="5" y="3" width="14" height="18" rx="1.5" />
+      <path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01M10.5 21v-3h3v3" />
+    </>
+  ),
+  user: (
+    <>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4.5 21a7.5 7.5 0 0 1 15 0" />
+    </>
+  ),
 } as const;
 
 export type IconName = keyof typeof paths;
